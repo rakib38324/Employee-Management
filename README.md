@@ -77,8 +77,8 @@ backend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rakib38324/Enzee-Task-Management-System-Server.git
-cd Enzee-Task-Management-System-Server
+git clone https://github.com/rakib38324/Employee-Management.git
+cd Employee-Management
 ```
 
 ### 2. Install resources
