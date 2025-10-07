@@ -1,7 +1,7 @@
 # 📝  Welcome to Employee Management System
 
 This is an **Employee management system** built with **Express.js**, **TypeScript**, **MongoDB**, and **JWT authentication**.  
-It enables users to securely manage their tasks, featuring authentication, email verification, and CRUD operations for employees management.
+It enables users to securely manage their tasks, featuring authentication, email verification, and CRUD operations for employee management.
 
 ---
 ### Backend Live Link
@@ -30,6 +30,29 @@ https://github.com/rakib38324/Employee-Management-Frontend
   - Update Employee Information.    
   - Delete Employee.
   - Get Employees with multiple queries.
+ 
+---
+### Api Endpoint
+---
+1. Auth:
+     1. Registration: {{Local_URL}}/api/v1/user/user-registration
+     2. Login: {{Local_URL}}/api/v1/auth/login
+     3. Email Verification: {{Local_URL}}/api/v1/auth/email-verification
+     4. Resend Email Verification Code: {{Local_URL}}/api/v1/auth/resend-email-verification
+     5. Change Password: {{Local_URL}}/api/v1/auth/change-password
+     6. Forget Password: {{Local_URL}}/api/v1/auth/forget-password
+     7. Reset Password: {{Local_URL}}/api/v1/auth/reset-password
+
+2. Users:
+    1. Get all users: {{Local_URL}}/api/v1/user
+    2. Get Me: {{Local_URL}}/api/v1/user/get-me
+    3. Get Single User: {{Local_URL}}/api/v1/user/USERID
+  
+3. Employee:
+    1. Get All Employees: {{Local_URL}}/api/v1/employee/?maxSalary=300
+    2. Create Employee: {{Local_URL}}/api/v1/employee/create-employee
+    3. Update Employee: {{Local_URL}}/api/v1/employee/update-employee/EMPLOYEEID
+    4. Delete Employee: {{Local_URL}}/api/v1/employee/delete-employee/EMPLOYEEID
 
 ---
 ### Project Structure
