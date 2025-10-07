@@ -12,7 +12,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const app = (0, express_1.default)();
 const allowedOrigins = [
     'http://localhost:3000', // your Next.js local dev
-    'https://employee-management-rouge-rho.vercel.app/', // production frontend
+    'https://employee-management-rouge-rho.vercel.app', // production frontend
 ];
 //--->parser
 app.use(express_1.default.json());

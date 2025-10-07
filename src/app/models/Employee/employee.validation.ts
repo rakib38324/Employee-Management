@@ -55,9 +55,7 @@ const updateEmployeeValidationSchema = z.object({
         message: 'Invalid date format. Must be a valid ISO date string.',
       })
       .optional(),
-    status: z
-      .enum(['active', 'on-leave', 'resigned'])
-      .optional(),
+    status: z.enum(['active', 'on-leave', 'resigned']).optional(),
   }),
 });
 

@@ -13,11 +13,11 @@ router.post(
 );
 
 router.get('/', EmployeeController.getAllEmployee);
-router.get('/:id', 
-  // Auth(), 
-EmployeeController.getSingleEmployee);
-
-
+router.get(
+  '/:id',
+  // Auth(),
+  EmployeeController.getSingleEmployee,
+);
 
 router.patch(
   '/update-employee/:id',
@@ -26,8 +26,10 @@ router.patch(
   EmployeeController.updateEmployee,
 );
 
-router.delete('/delete-employee/:id',
+router.delete(
+  '/delete-employee/:id',
   //  Auth(),
-    EmployeeController.deleteEmployee);
+  EmployeeController.deleteEmployee,
+);
 
 export const employeeRouter = router;

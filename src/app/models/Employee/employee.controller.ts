@@ -14,7 +14,6 @@ const CreatEmployee = catchAsync(async (req, res) => {
   });
 });
 
-
 const getAllEmployee = catchAsync(async (req, res) => {
   const result = await employeeServices.getAllEmployeeFromDB(req.query);
 
@@ -25,7 +24,6 @@ const getAllEmployee = catchAsync(async (req, res) => {
     data: result,
   });
 });
-
 
 const getSingleEmployee = catchAsync(async (req, res) => {
   const taskId = req.params.id;
@@ -39,12 +37,10 @@ const getSingleEmployee = catchAsync(async (req, res) => {
   });
 });
 
-
-
 const updateEmployee = catchAsync(async (req, res) => {
   const taskId = req.params.id;
   const payload = req.body;
-  const result = await employeeServices.updateEmpolyee(taskId, payload,);
+  const result = await employeeServices.updateEmpolyee(taskId, payload);
 
   commonRes(res, {
     statusCode: httpStatus.OK,
@@ -53,7 +49,6 @@ const updateEmployee = catchAsync(async (req, res) => {
     data: result,
   });
 });
-
 
 const deleteEmployee = catchAsync(async (req, res) => {
   const _id = req.params.id;
