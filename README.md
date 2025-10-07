@@ -1,20 +1,20 @@
-# 📝  Welcome to Enzee Task Management System
+# 📝  Welcome to Employee Management System
 
-This is an **individual personal task management system** built with **Express.js**, **TypeScript**, **MongoDB**, and **JWT authentication**.  
-It enables users to securely manage their tasks, featuring authentication, email verification, and CRUD operations for tasks.
+This is an **Employee management system** built with **Express.js**, **TypeScript**, **MongoDB**, and **JWT authentication**.  
+It enables users to securely manage their tasks, featuring authentication, email verification, and CRUD operations for employees management.
 
 ---
 ### Backend Live Link
 ```
-https://enzee-task-management-system-server.onrender.com
+https://server-pink-seven.vercel.app
 ```
 ### Frontend Live Link
 ```
-https://enzee-task-management-frontend.vercel.app
+https://employee-management-rouge-rho.vercel.app/
 ```
 ### Frontend GitHub Link
 ```
-https://github.com/rakib38324/Enzee-Task-Management-System-Frontend
+https://github.com/rakib38324/Employee-Management-Frontend
 ```
 
 ## 🚀 Features
@@ -25,12 +25,11 @@ https://github.com/rakib38324/Enzee-Task-Management-System-Frontend
   - Forget Password & Reset Password  
   - Email Verification System  
 
-- 📝 **Task Management**
-  - Create Task  
-  - Update Task  
-  - Update Task Status (e.g., Pending → Completed)  
-  - Delete Task
-  - After completing the task, find the notification in your email.
+- 📝 **Employee Management**
+  - Create Employee.  
+  - Update Employee Information.    
+  - Delete Employee.
+  - Get Employees with multiple queries.
 
 ---
 ### Project Structure
@@ -55,12 +54,12 @@ backend/
 │   │   │   |   ├── router/       # User Registration routes
 │   │   │   |   ├── service/      # User Registration services (business logic)
 │   │   │   |   └── validation/   # User Registration input validation
-│   │   │   └── Task/       # task Module
-│   │   │       ├── controller/   # task controllers
-│   │   │       ├── interface/    # task-related interfaces
-│   │   │       ├── router/       # task routes
-│   │   │       ├── service/      # task services (business logic)
-│   │   │       └── validation/   # task input validation
+│   │   │   └── Employee/       # task Module
+│   │   │       ├── controller/   # Employee controllers
+│   │   │       ├── interface/    # Employee-related interfaces
+│   │   │       ├── router/       # Employee routes
+│   │   │       ├── service/      # Employee services (business logic)
+│   │   │       └── validation/   # Employee input validation
 │   │   ├── routers/        # API Routes entry point
 │   │   └── utils/          # Utility functions (email, tokens, helpers)
 │   │
@@ -116,45 +115,4 @@ npm run build
 npm start
 ```
 
-# 🛠️ Design Choices
 
-Email Verification System: Implemented to ensure only valid users can access the platform and to enhance account security.
-
-JWT Authentication: Chosen for stateless, scalable authentication. Tokens are generated for access and refresh sessions.
-
-Express + TypeScript: Provides type safety and a better developer experience.
-
-MongoDB (Mongoose): Flexible document-based database for storing user and task data.
-
-Separation of Concerns: Authentication, middleware, and task management are modularized for a clean architecture.
-
-# ⚖️ Trade-offs & Assumptions
-
-JWT over Sessions:
-I chose JWT tokens for security and scalability. They allow stateless authentication, but the trade-off is that token invalidation is harder compared to session-based auth.
-
-Access & Refresh Tokens:
-I used short-lived access tokens for requests and long-lived refresh tokens for renewing sessions, balancing security vs. usability.
-
-Email Provider Assumption:
-Assumed that SMTP credentials (e.g., Gmail, SendGrid) would be available for email verification and password reset flows.
-
-# ⚡ Challenges
-
-Email Sending Issue on Vercel
-When deploying the backend on Vercel, the email service did not work properly because serverless functions restrict long-running connections (like SMTP).
-
-✅ Solution: I deployed the backend on Render, which supports persistent connections and SMTP, and kept the frontend on Vercel. This solved the email verification & password reset issue.
-
-CORS Configurations
-Had to explicitly configure CORS in Express to allow communication between frontend (Next.js) and backend (Render).
-
-# ✅ Need Future Improvements
-
-Add task categories & priority levels.
-
-Add real-time updates with WebSockets (Socket.IO).
-
-Implement unit & integration tests with Jest.
-
-Deploy frontend (Next.js) + backend (Express) together in Docker for easier scaling.
